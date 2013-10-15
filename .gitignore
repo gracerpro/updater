@@ -1,0 +1,10 @@
+/release/*
+/bin/*
+/ide/codeblocks/obj/*
+/ide/VC100/*
+
+!/bin/loader.ini
+
+!/ide/VC100/*.sln
+!/ide/VC100/*.filters
+!/ide/VC100/*.vcxproj

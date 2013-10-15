@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1373346842 source:d:\slaff\visual c++ 10\patcher\src\global.cpp
+	<Windows.h>
+	<TlHelp32.h>
+	<shlobj.h>
+	<objidl.h>
+	<string.h>
+	"global.h"
+
+1373346781 d:\slaff\visual c++ 10\patcher\src\global.h
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	<Windows.h>
+
+1373346781 source:d:\slaff\visual c++ 10\patcher\src\updater.cpp
+	<io.h>
+	<shlobj.h>
+	<objidl.h>
+	<clocale>
+	"global.h"
+
+1381839062 source:d:\slaff\visual c++ 10\updater\src\global.cpp
+	"global.h"
+	<string.h>
+	<Windows.h>
+	<TlHelp32.h>
+	<shlobj.h>
+	<objidl.h>
+
+1381839349 d:\slaff\visual c++ 10\updater\src\global.h
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	<Windows.h>
+
