@@ -1,10 +1,14 @@
 /release/*
+
 /bin/*
-/ide/codeblocks/obj/*
-/ide/VC100/*
+!/bin/*.ini
 
-!/bin/loader.ini
+/build/codeblocks/obj/*
 
-!/ide/VC100/*.sln
-!/ide/VC100/*.filters
-!/ide/VC100/*.vcxproj
+/build/VisualStudio/*
+!/build/VisualStudio/*.filters
+!/build/VisualStudio/*.vcxproj
+
+*.suo
+*.layout
+*.depend
