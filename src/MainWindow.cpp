@@ -47,7 +47,9 @@ LRESULT CALLBACK MainWindow::MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam,
 	case WM_INITDIALOG:
 		g_MainWindow->m_hWnd = hWnd;
 		g_MainWindow->SetProgressStep();
+#ifndef _DEBUG
 		SetTimer(hWnd, 0, g_MainWindow->GetVisibleMsecCount(), NULL);
+#endif
 		g_MainWindow->EnableCloseItem(false);
 		return TRUE;
 	case WM_TIMER:

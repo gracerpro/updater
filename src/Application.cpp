@@ -1,6 +1,8 @@
 #include "Application.h"
 #include "resource.h"
+#ifndef _WIN32_IE
 #define _WIN32_IE 0x301
+#endif
 #include <CommCtrl.h>
 #include <exception>
 #include <fstream>
@@ -57,7 +59,7 @@ DWORD WINAPI CopyUpdatedFilesThread(LPVOID param) {
 		if (!IsDir(dir.c_str())) {
 			CreateDirectory(dir.c_str(), NULL);
 			message = "Создание каталога: ";
-			message += localDir;
+			message += *iter;
 			mainWindow.AddMessage(message.c_str());
 		}
 	}
@@ -212,14 +214,13 @@ static void FindFilesInDir(StringList* fileList, const std::string& dir,
 				std::string dir = remoteDir;
 				std::string newDir;
 				if (!(relativeDir).empty()) {
-					newDir = relativeDir + PATH_SEPARATOR;
+					newDir = relativeDir;
 				}
 				newDir += wfd.cFileName;
 				newDir += PATH_SEPARATOR;
 
 				dir += newDir;
 
-				// relativeDir + PATH_SEPARATOR +
 				directoryList.push_back(newDir);
 
 				size_t lenBefore = relativeDir.length();
